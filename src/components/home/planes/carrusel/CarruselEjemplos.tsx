@@ -38,7 +38,7 @@ const ejemplos = [
   },
 ];
 
-const numeroWhatsApp = "5491123193387";
+const numeroWhatsApp = "5491156959454";
 
 const mensajeWhatsApp =
   "Hola! Estoy interesada/o en crear una página web para mi negocio o marca personal. Me gustaría recibir más información y conocer una propuesta adaptada a mi proyecto. ¡Muchas gracias!";
