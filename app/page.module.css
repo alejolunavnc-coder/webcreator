@@ -1,0 +1,106 @@
+.mainBackground {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 76% 22%, rgba(132, 45, 255, 0.2), transparent 29rem),
+    radial-gradient(circle at 96% 36%, rgba(0, 132, 255, 0.11), transparent 25rem),
+    radial-gradient(circle at 50% 72%, rgba(127, 46, 245, 0.17), transparent 36rem),
+    radial-gradient(circle at 8% 86%, rgba(104, 35, 220, 0.12), transparent 28rem),
+    linear-gradient(
+      180deg,
+      #020204 0%,
+      #050308 32%,
+      #05020b 57%,
+      #07030f 78%,
+      #030207 100%
+    );
+}
+
+.ambientGrid {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  opacity: 0.25;
+  background-image:
+    linear-gradient(rgba(158, 93, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(158, 93, 255, 0.045) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 18%,
+    #000 88%,
+    transparent 100%
+  );
+}
+
+.ambientGlowLeft,
+.ambientGlowRight {
+  position: absolute;
+  z-index: -2;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(70px);
+}
+
+.ambientGlowLeft {
+  left: -240px;
+  top: 42%;
+  width: 620px;
+  height: 620px;
+  background: rgba(105, 31, 220, 0.11);
+}
+
+.ambientGlowRight {
+  right: -230px;
+  top: 12%;
+  width: 720px;
+  height: 720px;
+  background: rgba(91, 43, 224, 0.12);
+}
+
+@media (max-width: 900px) {
+  .ambientGrid {
+    background-size: 46px 46px;
+  }
+}
+
+@media (max-width: 560px) {
+  .mainBackground {
+    /*
+     * En celular se elimina el glow central de 72%.
+     * Ese radial-gradient era la franja violeta ancha
+     * entre Herramientas y Planes.
+     */
+    background:
+      radial-gradient(circle at 76% 20%, rgba(132, 45, 255, 0.14), transparent 24rem),
+      radial-gradient(circle at 96% 34%, rgba(0, 132, 255, 0.06), transparent 21rem),
+      linear-gradient(
+        180deg,
+        #020204 0%,
+        #050308 34%,
+        #05020b 60%,
+        #07030f 80%,
+        #030207 100%
+      );
+  }
+
+  .ambientGrid {
+    opacity: 0.12;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.28) 22%,
+      #000 46%,
+      #000 84%,
+      transparent 100%
+    );
+  }
+
+  .ambientGlowLeft,
+  .ambientGlowRight {
+    display: none;
+  }
+}
