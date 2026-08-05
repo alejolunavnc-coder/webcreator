@@ -293,15 +293,15 @@
   }
 }
 
-/* Netbook: 901px a 1199px */
+/* Netbook y pantallas intermedias: 901px a 1199px */
 @media (max-width: 1199px) and (min-width: 901px) {
   .cards {
     width: 100%;
     margin-left: 0;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(2, 340px);
+    gap: 26px;
 
     justify-content: center;
     justify-items: center;
@@ -312,8 +312,22 @@
     width: 340px;
     min-width: 340px;
     max-width: 340px;
+    zoom: 1;
+  }
+}
 
-    zoom: 0.68;
+@media (max-width: 900px) and (min-width: 561px) {
+  .cards {
+    width: 100%;
+    margin-left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 340px);
+    gap: 22px;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
   }
 }
 
