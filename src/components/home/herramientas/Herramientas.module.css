@@ -267,11 +267,41 @@
   align-items: start;
 }
 
-@media (max-width: 1180px) {
+/* =========================================================
+   TARJETAS RESPONSIVAS — PC, NOTEBOOK Y NETBOOK
+   ========================================================= */
+
+/* Monitores grandes */
+@media (min-width: 1500px) {
+  .cards {
+    width: calc(100% + 240px);
+    margin-left: -120px;
+    grid-template-columns: repeat(4, 340px);
+    justify-content: start;
+    justify-items: start;
+  }
+}
+
+/* Notebook: 1200px a 1499px */
+@media (max-width: 1499px) and (min-width: 1200px) {
   .cards {
     width: 100%;
     margin-left: 0;
     grid-template-columns: repeat(3, 340px);
+    justify-content: center;
+    justify-items: center;
+  }
+}
+
+/* Netbook: 901px a 1199px */
+@media (max-width: 1199px) and (min-width: 901px) {
+  .cards {
+    width: 100%;
+    margin-left: 0;
+    grid-template-columns: repeat(2, 340px);
+    gap: 26px;
+    justify-content: center;
+    justify-items: center;
   }
 }
 
@@ -295,12 +325,6 @@
     right: -250px;
   }
 
-  .cards {
-    width: 100%;
-    margin-left: 0;
-    grid-template-columns: repeat(2, 340px);
-    gap: 22px;
-  }
 }
 
 @media (max-width: 560px) {
