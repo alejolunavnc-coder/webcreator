@@ -693,3 +693,20 @@
     transition: none;
   }
 }
+
+/* ======================================================
+   NETBOOK — AJUSTE EXCLUSIVO 901px A 1199px
+   No modifica PC grande, notebook ni celular.
+   ====================================================== */
+@media (min-width: 901px) and (max-width: 1199px) {
+  .card {
+    height: 520px;
+    min-height: 520px;
+    aspect-ratio: auto;
+  }
+
+  .demoBox {
+    top: 198px;
+    bottom: 72px;
+  }
+}

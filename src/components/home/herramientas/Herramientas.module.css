@@ -298,10 +298,22 @@
   .cards {
     width: 100%;
     margin-left: 0;
-    grid-template-columns: repeat(2, 340px);
-    gap: 26px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
     justify-content: center;
     justify-items: center;
+    align-items: start;
+  }
+
+  .cards > * {
+    width: 340px;
+    min-width: 340px;
+    max-width: 340px;
+
+    zoom: 0.68;
   }
 }
 
