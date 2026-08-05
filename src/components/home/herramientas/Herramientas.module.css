@@ -308,7 +308,7 @@
     min-height: 520px;
 
     /* Sube toda la sección para acercarla al Hero. */
-    margin-top: -118px;
+    margin-top: -84px;
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -514,5 +514,28 @@
   .dotsLeft,
   .dotsRight {
     display: none !important;
+  }
+}
+
+/* =========================================================
+   NAVEGACIÓN POR ANCLAS — PC Y CELULAR
+   Deja la chapita completamente visible al llegar.
+   ========================================================= */
+@media (min-width: 901px) {
+  .section {
+    scroll-margin-top: 142px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    scroll-margin-top: 112px;
+  }
+
+  .kicker {
+    position: relative;
+    z-index: 8;
+    visibility: visible;
+    opacity: 1;
   }
 }

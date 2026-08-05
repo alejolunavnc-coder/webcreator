@@ -143,3 +143,26 @@
     line-height: 1.52;
   }
 }
+
+/* =========================================================
+   NAVEGACIÓN POR ANCLAS — PC Y CELULAR
+   Deja "EJEMPLOS DE PROYECTOS" completamente visible.
+   ========================================================= */
+@media (min-width: 901px) {
+  .section {
+    scroll-margin-top: 188px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    scroll-margin-top: 138px;
+  }
+
+  .kicker {
+    position: relative;
+    z-index: 8;
+    visibility: visible;
+    opacity: 1;
+  }
+}
